@@ -47,3 +47,68 @@
   padding: 0.8rem 1rem;
   width: 25rem;
 }
+
+.inputRole {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+  width: 22rem;
+  height: 3.1rem;
+}
+
+@media only screen and (max-width: 1135px) {
+  .inputs {
+    width: 18rem;
+  }
+
+  .inputRole {
+    width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .inputs {
+    width: 12rem;
+  }
+
+  .inputRole {
+    width: 14rem;
+  }
+}
+
+@media only screen and (max-width: 911px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-label {
+    margin-top: 1rem;
+    margin: 0.5rem auto;
+  }
+
+  .inputs {
+    width: 26rem;
+    margin: auto;
+  }
+
+  .inputRole {
+    margin: auto;
+    width: 28rem;
+  }
+
+  .button {
+    padding: 0.8rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .inputs {
+    width: 18rem;
+  }
+
+  .inputRole {
+    width: 20rem;
+  }
+}
+

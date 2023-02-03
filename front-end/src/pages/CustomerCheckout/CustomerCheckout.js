@@ -13,7 +13,7 @@ function CustomerCheckout() {
     <div className={ styles['checkout-page'] }>
       <Header />
       <table className={ styles.tableCheck }>
-        <thead>
+        <thead className={ styles.thead }>
           <tr>
             <th>Item</th>
             <th>Descrição</th>
@@ -23,7 +23,7 @@ function CustomerCheckout() {
             <th>Remover Item</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className={ styles.tbody }>
           {cartProducts.map((product, index) => (
             <CartProduct product={ product } index={ index } key={ product.id } />
           ))}

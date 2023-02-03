@@ -1,5 +1,6 @@
 .pedidos-container {
   display: flex;
+  justify-content: center;
   flex-flow: wrap;
   flex-direction: row;
   margin: 5rem;

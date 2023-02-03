@@ -47,7 +47,7 @@ function UsersManager() {
         </thead>
         {!isLoading
             && datas?.map((index) => (
-              <tbody className={ styles.tbody } key={ index.id }>
+              <tbody id={ styles.tbodyId } className={ styles.tbody } key={ index.id }>
                 <tr>
 
                   <td

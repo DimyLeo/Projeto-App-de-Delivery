@@ -11,13 +11,16 @@
   text-align: center;
 }
 
+.table {
+  border-collapse: collapse;
+}
+
 .table th {
   font-size: 1.7rem;
   font-weight: 500;
 }
 
 .table td {
-  box-shadow: 0 6px 14px 0 rgba(59, 58, 58, 0.75);
   color: var(--secondary);
   font-size: 1.5rem;
   padding: 0.6rem 5rem;
@@ -33,13 +36,13 @@
 
 .table td:nth-child( 1 ) {
   background-color: var(--light-grenn);
-  border-radius: 1rem 0 0 1rem;
   color: var(--primary);
 }
 
 .table td:nth-child( 2 ) {
   background-color: var(--secondary);
   color: var(--primary);
+  border-radius: 0;
 }
 
 .table td:nth-child( 3 ) {
@@ -52,6 +55,101 @@
 
 .table td:nth-child( 5 ) {
   background-color: var(--light-blue);
-  border-radius: 0 1rem 1rem 0;
   padding: 0;
+}
+
+@media only screen and (max-width: 1090px) {
+  .table td {
+    padding: 0.3rem 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+  .table td {
+    padding: 0.1rem 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .table td {
+    padding: 0rem 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .table td {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .table td {
+    padding: 0rem;
+  }
+
+  .table .thead {
+    display: none;
+  }
+
+  .manager-users .table .tbody tr {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table td {
+    padding: 1rem;
+    box-shadow: 0 6px 14px 0 rgba(59, 58, 58, 0.75);
+    color: var(--secondary);
+    font-size: 1.5rem;
+    /* margin: 0.1rem; */
+  }
+
+  .table td:nth-child( 1 ) {
+    background-color: var(--dark-grenn);
+    border-radius: 1rem 1rem 0 0;
+    color: var(--secondary);
+  }
+
+  .table td:nth-child( 1 )::before {
+    content: "Item:  ";
+    display: inline-block;
+  }
+
+  .table td:nth-child( 2 ) {
+    background-color: var(--dark-grenn);
+    color: var(--secondary);
+  }
+
+  .table td:nth-child( 2 )::before {
+    content: "Nome:  ";
+    display: inline-block;
+  }
+
+  .table td:nth-child( 3 ) {
+    background-color: var(--dark-grenn);
+    color: var(--secondary);
+  }
+
+  .table td:nth-child( 3 )::before {
+    content: "E-mail:  ";
+    display: inline-block;
+  }
+
+  .table td:nth-child( 4 ) {
+    background-color: var(--dark-grenn);
+    color: var(--secondary);
+  }
+
+  .table td:nth-child( 4 )::before {
+    content: "Tipo:  ";
+    display: inline-block;
+  }
+
+  .table td:nth-child( 5 ) {
+    background-color: var(--light-blue);
+    border-radius: 0 0 1rem 1rem;
+    color: var(--secondary);
+    padding: 0.5rem;
+  }
 }

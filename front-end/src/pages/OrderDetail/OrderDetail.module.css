@@ -77,3 +77,46 @@
   padding: 0.5rem 1.5rem;
   text-align: center;
 }
+
+@media only screen and (max-width: 785px) {
+  .date, .status {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .pedido, .name {
+    margin: auto 0.5rem;
+  }
+
+  .date, .status, .button {
+    padding: 0.2rem 0.2rem;
+  }
+}
+
+@media only screen and (max-width: 495px) {
+  .head span, .button {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 445px) {
+  .head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .date, .status, .button {
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pedido, .name {
+    margin: 0.5rem auto;
+  }
+}
+

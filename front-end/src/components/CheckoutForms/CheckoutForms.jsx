@@ -116,7 +116,7 @@ function CheckoutForms({ totalPrice, products }) {
         <label className={ styles[STYLE_CLASSNAMES.FORM_LABEL] } htmlFor="select">
           <span>P.Vendedora Responsável:</span>
           <select
-            className={ styles.inputs }
+            className={ styles.inputRole }
             { ...register('seller') }
             data-testid="customer_checkout__select-seller"
           >

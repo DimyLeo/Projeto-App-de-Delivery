@@ -121,7 +121,7 @@ function AdminRegister() {
         <label htmlFor="role" className={ styles[STYLE_CLASSNAMES.FORM_LABEL] }>
           Role
           <select
-            className={ styles.inputs }
+            className={ styles['input-role'] }
             defaultValue="customer"
             type="role"
             id="role"
