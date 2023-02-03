@@ -1,11 +1,16 @@
 .login-page {
-  align-items: center;
-  background-color: var(--bg-light);
-  color: black;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: grid;
+  place-items: center;
+  /* align-items: center; */
+  /* background-color: var(--bg-light); */
+  /* color: black; */
+  /* display: flex; */
+  /* height: 100vh; */
+  /* justify-content: center; */
+  /* width: 100%; */
 }
 
 .login-container {
