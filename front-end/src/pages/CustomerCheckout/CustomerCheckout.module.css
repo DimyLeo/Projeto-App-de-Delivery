@@ -93,15 +93,16 @@
   padding: 0;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and ( max-width : 1000px ) {
+
   .tableCheck .thead {
     display: none;
   }
 
   .tableCheck .tbody tr {
-    margin: 2rem;
     display: flex;
     flex-direction: column;
+    margin: 2rem;
   }
 
   .tableCheck td:nth-child( 1 ) {
@@ -111,8 +112,8 @@
     width: 25rem;
   }
 
-  .tableCheck td:nth-child( 1 )::before {
-    content: "Item:  ";
+  .tableCheck td:nth-child( 1 ):before {
+    content: 'Item:  ';
     display: inline-block;
   }
 
@@ -122,8 +123,8 @@
     width: 25rem;
   }
 
-  .tableCheck td:nth-child( 2 )::before {
-    content: "Descrição:  ";
+  .tableCheck td:nth-child( 2 ):before {
+    content: 'Descrição:  ';
     display: inline-block;
   }
 
@@ -133,8 +134,8 @@
     width: 25rem;
   }
 
-  .tableCheck td:nth-child( 3 )::before {
-    content: "Quantidade:  ";
+  .tableCheck td:nth-child( 3 ):before {
+    content: 'Quantidade:  ';
     display: inline-block;
   }
 
@@ -144,8 +145,8 @@
     width: 25rem;
   }
 
-  .tableCheck td:nth-child( 4 )::before {
-    content: "Valor Unitário:  ";
+  .tableCheck td:nth-child( 4 ):before {
+    content: 'Valor Unitário:  ';
     display: inline-block;
   }
 
@@ -155,8 +156,8 @@
     width: 25rem;
   }
 
-  .tableCheck td:nth-child( 5 )::before {
-    content: "Sub-total:  ";
+  .tableCheck td:nth-child( 5 ):before {
+    content: 'Sub-total:  ';
     display: inline-block;
   }
 

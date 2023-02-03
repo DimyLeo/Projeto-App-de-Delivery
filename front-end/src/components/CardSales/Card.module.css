@@ -98,7 +98,8 @@
   margin-right: 1rem;
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and ( max-width : 550px ) {
+
   .container {
     width: 30rem;
   }
@@ -106,9 +107,9 @@
   .dateValueSeller {
     width: 7.5rem;
   }
-  
+
   .dateValueCustomer {
     width: 7.5rem;
   }
-  
+
 }

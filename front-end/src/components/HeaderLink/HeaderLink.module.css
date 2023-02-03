@@ -17,17 +17,19 @@
   transition: 400ms;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and ( max-width : 750px ) {
+
   .links {
     font-size: 1.5rem;
-    padding-right: 0.8rem;
     padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 }
 
-@media only screen and (max-width: 380px) {
+@media only screen and ( max-width : 380px ) {
+
   .links {
-    padding-right: 1.5rem;
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }

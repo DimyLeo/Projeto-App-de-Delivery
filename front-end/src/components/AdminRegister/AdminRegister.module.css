@@ -40,9 +40,9 @@
 .input-role {
   border: none;
   border-radius: 0.5rem;
+  height: 3.1rem;
   padding: 0.8rem 1rem;
   width: 17rem;
-  height: 3.1rem;
 }
 
 .button {
@@ -53,7 +53,8 @@
   padding: 0 3rem;
 }
 
-@media only screen and (max-width: 995px) {
+@media only screen and ( max-width : 995px ) {
+
   .inputs {
     width: 12rem;
   }
@@ -63,7 +64,8 @@
   }
 }
 
-@media only screen and (max-width: 890px) {
+@media only screen and ( max-width : 890px ) {
+
   .inputs {
     padding: 0.8rem 0.5rem;
     width: 10rem;
@@ -75,7 +77,8 @@
   }
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and ( max-width : 765px ) {
+
   .form-container {
     display: flex;
     flex-direction: column;
@@ -95,16 +98,16 @@
     border: none;
     border-radius: 0.5rem;
     color: var(--secondary);
-    padding: 0.8rem 1rem;
     margin: 1.5rem auto;
+    padding: 0.8rem 1rem;
     width: 22rem;
   }
 
   .input-role {
     border: none;
     border-radius: 0.5rem;
+    height: 3.1rem;
     padding: 0.8rem 1rem;
     width: 22rem;
-    height: 3.1rem;
   }
 }
