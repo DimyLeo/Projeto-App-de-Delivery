@@ -31,11 +31,11 @@
   flex-wrap: wrap;
   height: 8rem;
   justify-content: center;
+  margin: 0.5rem;
   max-width: 6rem;
   min-width: 2rem;
   padding: 1.5rem;
   text-align: center;
-  margin: 0.5rem;
 }
 
 .statusSeller {
@@ -46,9 +46,9 @@
   font-weight: 500;
   height: 7rem;
   justify-content: center;
+  margin: 0.5rem;
   max-width: 14rem;
   min-width: 8rem;
-  margin: 0.5rem;
 }
 
 .statusCustomer {
@@ -59,8 +59,8 @@
   font-weight: 500;
   height: 11rem;
   justify-content: center;
-  width: 14rem;
   margin: 0.5rem;
+  width: 14rem;
 }
 
 .order-data {

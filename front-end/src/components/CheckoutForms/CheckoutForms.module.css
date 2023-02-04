@@ -1,9 +1,9 @@
 .form-container {
   align-items: center;
   background: var(--bg-tables);
-  color: var(--secondary);
   border-radius: 1rem;
   box-shadow: 20px 20px 60px #00000060 , -20px -20px 60px #00000060;
+  color: var(--secondary);
   display: flex;
   flex-direction: column;
   justify-content: center;

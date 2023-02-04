@@ -1,5 +1,6 @@
 .login-page {
   animation: zoom 7000ms infinite ease-in-out;
+
   /* background-image: url('https://images.unsplash.com/photo-1488342994276-7c3bc0742042?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'); */
   background-image: url('../../images/background.avif');
   background-position: center;
@@ -78,8 +79,8 @@
   font-size: 2rem;
   height: 6rem;
   padding: 1rem 2rem;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 .form-input:focus {
@@ -140,6 +141,7 @@
 
 .login-hero {
   background-color: var(--primary);
+
   /* background-image: url('https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1630&q=80'); */
   background-image: url('../../images/moto.avif');
   background-position: center;

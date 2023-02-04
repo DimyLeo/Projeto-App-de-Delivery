@@ -67,9 +67,9 @@
   border-radius: 1rem;
   font-size: 1.6rem;
   height: 3rem;
+  margin: auto;
   padding: 1rem;
   width: 70%;
-  margin: auto;
 }
 
 .form-label input:focus {
@@ -96,8 +96,8 @@
   all: unset;
   background-color: var(--bg-tables);
   border: 0.5rem solid var(--bg-light);
-  color: var(--secondary);
   border-radius: 1rem;
+  color: var(--secondary);
   font-size: 2rem;
   font-weight: 600;
   height: 4rem;
@@ -130,6 +130,7 @@
 }
 
 @media only screen and ( max-width : 600px ) {
+
   .register-container {
     width: 85%;
   }

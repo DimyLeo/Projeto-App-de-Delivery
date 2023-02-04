@@ -5,20 +5,20 @@
   flex-direction: row;
   height: 4.5rem;
   justify-content: center;
-  width: 100%;
   margin-top: 2rem;
+  width: 100%;
 }
 
 .quantity-controller {
-  color: var(--secondary);
-  background-color: var(--dark-blue);
-  font-size: 4rem;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: var(--dark-blue);
   border: none;
   border-radius: 1rem;
+  color: var(--secondary);
   cursor: pointer;
+  display: flex;
+  font-size: 4rem;
+  justify-content: center;
   width: 35%;
 }
 
@@ -29,8 +29,8 @@
 
 .quantity-display {
   background-color: var(--hover-header);
-  color: var(--secondary);
   border: none;
+  color: var(--secondary);
   text-align: center;
   width: 30%;
 }

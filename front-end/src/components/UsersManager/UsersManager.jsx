@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import React, { useMemo } from 'react';
@@ -17,6 +16,7 @@ function UsersManager({ refetch, setRefetch }) {
       url: `${baseUrl}${endpoint}`,
       headers: { Authorization: getLocalStorage('user')?.token },
     }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [refetch],
   );
 

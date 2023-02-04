@@ -7,7 +7,6 @@
 .margin-container {
   background-color: var(--dark-blue);
   display: flex;
-  justify-content: center;
   height: max(6.5rem, 6.5vh);
   justify-content: space-between;
   width: 100%;
@@ -16,9 +15,9 @@
 .common-links-container {
   display: flex;
   justify-content: flex-start;
-  width: 30%;
-  padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  width: 30%;
 }
 
 .role-links-container {
@@ -26,6 +25,7 @@
   display: flex;
   justify-content: flex-end;
   width: 30%;
+
   /* padding: 1rem; */
 }
 
@@ -47,18 +47,19 @@
 }
 
 .user-name {
-  color: var(--secondary);
-  font-weight: 500;
-  text-align: center;
-  width: 50%;
-  margin-right: 2rem;
   background-color: var(--purple);
   border-radius: 2rem;
+  color: var(--secondary);
+  font-weight: 500;
+  margin-right: 2rem;
   padding: 0.5rem 1rem;
+  text-align: center;
+  width: 50%;
 }
 
 .logout {
   align-items: center;
+  background-color: var(--logout);
   color: var(--secondary);
   cursor: pointer;
   display: flex;
@@ -68,7 +69,7 @@
   text-align: center;
   text-decoration: none;
   width: 50%;
-  background-color: var(--logout);
+
   /* padding: 1rem */
 }
 
