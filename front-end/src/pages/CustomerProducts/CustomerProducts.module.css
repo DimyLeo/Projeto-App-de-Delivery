@@ -1,5 +1,5 @@
 .page-container {
-  background-color: var(--bg-light);
+  background-color: var(--bg-dark);
   height: fit-content;
   min-height: 90vh;
   width: 100%;
@@ -12,9 +12,14 @@
 }
 
 .products-container {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  /* display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr; */
 }
 
 .background {

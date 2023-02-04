@@ -1,0 +1,119 @@
+.link-card {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.container {
+  background: var(--bg-tables);
+  border-radius: 0.5rem;
+  box-shadow: 20px 20px 60px #00000060 , -20px -20px 60px #00000060;
+  display: flex;
+  max-height: 12rem;
+  max-width: 45rem;
+  min-height: 6rem;
+  min-width: 20rem;
+}
+
+.container p {
+  font-size: 1.5rem;
+}
+
+.container h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.id {
+  align-items: center;
+  background-color: var(--secondary);
+  border-radius: 0.5rem 0 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  height: 8rem;
+  justify-content: center;
+  margin: 0.5rem;
+  max-width: 6rem;
+  min-width: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.statusSeller {
+  align-items: center;
+  background-color: var(--green-status);
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  font-weight: 500;
+  height: 7rem;
+  justify-content: center;
+  margin: 0.5rem;
+  max-width: 14rem;
+  min-width: 8rem;
+}
+
+.statusCustomer {
+  align-items: center;
+  background-color: var(--green-status);
+  border-radius: 0 0.5rem 0.5rem 0;
+  display: flex;
+  font-weight: 500;
+  height: 11rem;
+  justify-content: center;
+  margin: 0.5rem;
+  width: 14rem;
+}
+
+.order-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-data p {
+  margin: 0.5rem;
+}
+
+.dateValueSeller {
+  align-items: center;
+  background-color: var(--data-value);
+  border-radius: 0.5rem;
+  display: flex;
+  font-weight: 500;
+  height: 2.7rem;
+  justify-content: center;
+  padding: 0 2rem;
+  width: 15rem;
+}
+
+.dateValueCustomer {
+  align-items: center;
+  background-color: var(--data-value);
+  border-radius: 0.5rem;
+  display: flex;
+  font-weight: 500;
+  height: 5rem;
+  justify-content: center;
+  padding: 0 2rem;
+  width: 15rem;
+}
+
+.address {
+  color: var(--secondary);
+  margin-left: -6rem;
+  margin-right: 1rem;
+}
+
+@media only screen and ( max-width : 550px ) {
+
+  .container {
+    width: 30rem;
+  }
+
+  .dateValueSeller {
+    width: 7.5rem;
+  }
+
+  .dateValueCustomer {
+    width: 7.5rem;
+  }
+
+}

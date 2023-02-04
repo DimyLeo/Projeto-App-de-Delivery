@@ -9,6 +9,8 @@ const STYLE_CLASSNAMES = {
   FORM_LABEL: 'form-label',
 };
 
+const baseUrl = process.env.BASE_URL || 'http://localhost:3001';
+
 function Register() {
   const [isError, setIsError] = useState([]);
   const { push } = useHistory();
@@ -36,8 +38,9 @@ function Register() {
 
   const onSubmit = async (formData) => {
     try {
+      const endpoint = '/users';
       const { data: { response: { token } } } = await axios.post(
-        'http://localhost:3001/users',
+        `${baseUrl}${endpoint}`,
         formData,
       );
       const { password: _password, ...rest } = formData;
@@ -50,8 +53,9 @@ function Register() {
   };
 
   return (
-    <div className={ styles['login-page'] }>
-      <main className={ styles['login-container'] }>
+    <div className={ styles['register-page'] }>
+      <main className={ styles['register-container'] }>
+        <h1>Cadastre-se</h1>
         <form
           onSubmit={ handleSubmit(onSubmit) }
           className={ styles['form-container'] }
@@ -95,7 +99,7 @@ function Register() {
             htmlFor="password"
             className={ styles[STYLE_CLASSNAMES.FORM_LABEL] }
           >
-            Password
+            Senha
             <input
               type="password"
               id="password"

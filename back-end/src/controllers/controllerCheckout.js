@@ -1,4 +1,13 @@
+const jwt = require('jsonwebtoken');
+const jwtKey = require('fs').readFileSync('jwt.evaluation.key', {
+  encoding: 'utf-8',
+});
 const serviceCheckout = require('../services/serviceCheckout');
+
+const getIdAndRole = (authorization) => {
+  const { id, role } = jwt.verify(authorization, jwtKey);
+  return { id, role };
+};
 
 const ERROR_MESSAGE = 'Ocorreu um erro';
 const requestId = async (req, res, next) => {
@@ -15,9 +24,12 @@ const requestId = async (req, res, next) => {
   }
 };
 
-const getAll = async (_req, res) => {
+const getAll = async (req, res) => {
   try {
-    const sales = await serviceCheckout.getAllService();
+    const { authorization } = req.headers;
+    const { id, role } = getIdAndRole(authorization);
+
+    const sales = await serviceCheckout.getAllService(id, role);
     return res.status(200).json(sales);
   } catch (e) {
     console.log(e.message);

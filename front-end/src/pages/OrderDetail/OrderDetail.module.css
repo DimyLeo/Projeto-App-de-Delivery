@@ -1,7 +1,7 @@
 .container {
-  background: #e0e0e0;
-  border-radius: 1rem;
-  box-shadow: 20px 20px 60px #bebebe , -20px -20px 60px var(--secondary);
+  background: var(--bg-tables);
+  border-radius: 0.5rem;
+  box-shadow: 20px 20px 60px #00000060 , -20px -20px 60px #00000060;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,14 +10,17 @@
 }
 
 .title {
+  color: var(--secondary);
   margin-left: 5rem;
   margin-top: 5rem;
 }
 
 .head {
-  background-color: var(--head-order);
-  border-radius: 1rem;
+  background-color: var(--purple);
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: var(--secondary);
   display: flex;
+  justify-content: center;
 }
 
 .head span {
@@ -36,6 +39,7 @@
 .date {
   background-color: var(--data-value);
   border-radius: 0.5rem;
+  color: var(--primary);
   font-weight: 600;
   margin: 0.5rem;
   padding: 0.5rem 1.5rem;
@@ -44,22 +48,31 @@
 .status {
   background-color: var(--light-grenn);
   border-radius: 0.5rem;
+  color: var(--primary);
   font-weight: 600;
   margin: 0.5rem;
   padding: 0.5rem 1.5rem;
 }
 
 .button {
-  background-color: var(--dark-grenn);
+  background-color: var(--dark-blue);
   border: none;
   border-radius: 0.5rem;
   color: var(--secondary);
+  cursor: pointer;
   margin: 0.5rem;
   padding: 0.5rem 1.5rem;
 }
 
+
+.button:disabled {
+  background-color: var(--gray);
+  cursor: default;
+}
+
+
 .total {
-  background-color: var(--dark-grenn);
+  background-color: var(--dark-blue);
   border-radius: 0.5rem;
   color: var(--secondary);
   font-size: 1.6rem;
@@ -67,5 +80,51 @@
   margin: 3rem auto;
   padding: 0.5rem 1.5rem;
   text-align: center;
-  width: 5rem;
 }
+
+@media only screen and ( max-width : 785px ) {
+
+  .date, .status {
+    align-items: center;
+    display: flex;
+  }
+}
+
+@media only screen and ( max-width : 590px ) {
+
+  .pedido, .name {
+    margin: auto 0.5rem;
+  }
+
+  .date, .status, .button {
+    padding: 0.2rem;
+  }
+}
+
+@media only screen and ( max-width : 495px ) {
+
+  .head span, .button {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and ( max-width : 445px ) {
+
+  .head {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .date, .status, .button {
+    display: flex;
+    justify-content: center;
+    width: 15rem;
+  }
+
+  .pedido, .name {
+    margin: 0.5rem auto;
+  }
+}
+

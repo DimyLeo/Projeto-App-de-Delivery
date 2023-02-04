@@ -5,8 +5,9 @@ import Header from '../../components/Header/Header';
 import OrderTable from '../../components/OrderTable/OrderTable';
 import useFetch from '../../hooks/useFetch';
 import { priceFormatter } from '../../utils/dataFormat';
+import fetchGet from '../../utils/fetchGet';
 import { getLocalStorage } from '../../utils/localStorage';
-// import styles from './OrderDetail.module.css';
+import styles from './OrderDetail.module.css';
 
 const numberFormatter = new Intl.NumberFormat('pt-BR', {
   minimumIntegerDigits: 4,
@@ -15,19 +16,16 @@ const numberFormatter = new Intl.NumberFormat('pt-BR', {
 
 const dateFormatter = new Intl.DateTimeFormat('pt-br');
 
+const baseUrl = process.env.BASE_URL || 'http://localhost:3001';
+
 function OrderDetail() {
   const {
     params: { id },
   } = useRouteMatch();
   const userData = useMemo(() => getLocalStorage('user'), []);
-  const fetchOptions = useMemo(
-    () => ({
-      method: 'get',
-      url: `http://localhost:3001/customer/orders/${id}`,
-      headers: { Authorization: userData.token },
-    }),
-    [id, userData],
-  );
+
+  const endpoint = `/customer/orders/${id}`;
+  const fetchOptions = useMemo(() => (fetchGet(endpoint)), [endpoint]);
 
   const DATA_TESTID = {
     orderId: `${userData.role}_order_details__element-order-details-label-order-id`,
@@ -47,7 +45,7 @@ function OrderDetail() {
 
   const handleUpdateOrder = async (status) => {
     const updateOptions = {
-      url: `http://localhost:3001/checkout/${id}`,
+      url: `${baseUrl}/checkout/${id}`,
       method: 'put',
       data: { status },
       headers: { Authorization: getLocalStorage('user')?.token },
@@ -65,20 +63,33 @@ function OrderDetail() {
   return (
     <div>
       <Header />
-      <h2>Detalhes do Pedido</h2>
-      <section>
-        <div>
-          <span>{'Pedido '}</span>
-          <span data-testid={ DATA_TESTID.orderId }>
-            {numberFormatter.format(data.id)}
+      <h2 className={ styles.title }>Detalhes do Pedido</h2>
+      <section className={ styles.container }>
+        <div className={ styles.head }>
+          <div className={ styles.pedido }>
+            <span>{'Pedido '}</span>
+            <span data-testid={ DATA_TESTID.orderId }>
+              {numberFormatter.format(data.id)}
+            </span>
+          </div>
+          <span
+            className={ styles.name }
+            data-testid={ DATA_TESTID.seller }
+          >
+            {data.seller.name}
           </span>
-          <span data-testid={ DATA_TESTID.seller }>{data.seller.name}</span>
-          <span data-testid={ DATA_TESTID.date }>
+          <span className={ styles.date } data-testid={ DATA_TESTID.date }>
             {dateFormatter.format(new Date(data.saleDate))}
           </span>
-          <span data-testid={ DATA_TESTID.status }>{data.status}</span>
+          <span
+            className={ styles.status }
+            data-testid={ DATA_TESTID.status }
+          >
+            {data.status}
+          </span>
           {isCustomer ? (
             <button
+              className={ styles.button }
               data-testid={ DATA_TESTID.submit }
               type="button"
               disabled={ data.status !== 'Em Trânsito' }
@@ -89,6 +100,7 @@ function OrderDetail() {
           ) : (
             <>
               <button
+                className={ styles.button }
                 data-testid={ DATA_TESTID.preparing }
                 type="button"
                 disabled={ data.status !== 'Pendente' }
@@ -97,6 +109,7 @@ function OrderDetail() {
                 MARCAR COMO PREPARANDO
               </button>
               <button
+                className={ styles.button }
                 data-testid={ DATA_TESTID.dispatch }
                 type="button"
                 disabled={ data.status !== 'Preparando' }
@@ -108,9 +121,9 @@ function OrderDetail() {
           )}
         </div>
         <OrderTable products={ data.products } role={ userData.role } />
-        <div>
+        <div className={ styles.total }>
           <span data-testid={ DATA_TESTID.totalPrice }>
-            {priceFormatter.format(data.totalPrice)}
+            {`Total: R$ ${priceFormatter.format(data.totalPrice)}`}
           </span>
         </div>
       </section>

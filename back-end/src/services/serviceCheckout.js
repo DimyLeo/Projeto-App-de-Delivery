@@ -31,10 +31,19 @@ const createSale = async (body, token) => {
   }
 };
 
-const getAllService = async () => {
-  const sales = await Sale.findAll();
-  return sales;
+const getAllService = async (id, role) => {
+  try {
+    if (role === 'seller') {
+      const sales = await Sale.findAll();
+      return sales;
+    }
+    const sales = await Sale.findAll({ where: { userId: id } });
+    return sales;
+  } catch (error) {
+    throw new Error(error);
+  }
 };
+
 const getOneService = async (id) => {
   const sales = await Sale.findAll({
     where: { id },

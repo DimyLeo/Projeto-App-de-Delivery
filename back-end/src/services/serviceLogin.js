@@ -40,7 +40,7 @@ const loginService = async ({ email, password }) => {
   if (user.password !== newPassword) throw new ErrorGenerator(401, 'wrong password');
   const checkUser = await existenceUser({ email, password: newPassword });
   const response = { 
-    name: checkUser.name, email: checkUser.email, role: checkUser.role,
+    name: checkUser.name, email: checkUser.email, role: checkUser.role, id: checkUser.id,
   };
   
   const token = jwt.sign(response, secretKey, jwtConfig);

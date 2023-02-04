@@ -1,39 +1,63 @@
 .login-page {
-  min-height: 100vh;
-  min-height: 100dvh;
+  animation: zoom 7000ms infinite ease-in-out;
 
+  /* background-image: url('https://images.unsplash.com/photo-1488342994276-7c3bc0742042?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'); */
+  background-image: url('../../images/background.avif');
+  background-position: center;
+  background-size: cover;
   display: grid;
+  min-height: 100vh;
   place-items: center;
-  /* align-items: center; */
-  /* background-color: var(--bg-light); */
-  /* color: black; */
-  /* display: flex; */
-  /* height: 100vh; */
-  /* justify-content: center; */
-  /* width: 100%; */
+}
+
+@keyframes zoom {
+
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 105%;
+  }
+
+  100% {
+    background-size: 100%;
+  }
 }
 
 .login-container {
-  align-items: center;
-  align-self: center;
-  background-color: white;
-  border-radius: 20px;
+  background-color: var(--secondary);
+  border-radius: 1rem;
   display: flex;
-  filter: drop-shadow(0.5rem 0.5rem 2rem var(--bg-dark));
-  flex-direction: row;
-  height: 85%;
-  max-height: 96rem;
+  filter: drop-shadow(0.1rem 0.1rem 1rem black);
+  flex-direction: row-reverse;
+  height: 100%;
+  max-height: 75rem;
   max-width: 130rem;
   width: 100%;
 }
 
 .form-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  height: 90%;
-  justify-content: center;
+  column-gap: 10%;
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+  place-items: center;
+  width: 50%;
+}
+
+.form-group {
+  column-gap: 10%;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  width: 90%;
+}
+
+.form-group:last-child {
+  grid-template-columns: 1fr;
+  height: 20rem;
+  place-items: center;
   width: 100%;
 }
 
@@ -42,20 +66,29 @@
   flex-direction: column;
   font-size: 3rem;
   font-weight: 600;
+  margin-bottom: 1rem;
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
 
-.form-label input {
+.form-input {
   all: unset;
   border: 0.3rem solid var(--bg-light);
   border-radius: 1rem;
+  box-sizing: border-box;
   font-size: 2rem;
-  height: 3rem;
+  height: 6rem;
   padding: 1rem 2rem;
+  text-align: center;
+  width: 100%;
 }
 
-.form-label p {
+.form-input:focus {
+  border: 0.3rem solid var(--light-blue);
+}
+
+.form-validation {
+  color: var(--gray);
   font-size: 1.7rem;
   font-weight: 400;
   height: 1rem;
@@ -63,47 +96,77 @@
   text-align: start;
 }
 
-.form-validation {
-  color: gray;
-  font-size: 1.5rem;
-}
-
 .form-validation__success {
-  color: green;
+  color: var(--green);
+  font-size: 1.7rem;
+  font-weight: 400;
+  height: 1rem;
+  margin-left: 2rem;
+  text-align: start;
 }
 
-.form-container button {
+.button {
   all: unset;
-  background-color: var(--bg-light);
-  border: 0.5rem solid var(--bg-light);
+  background-color: var(--dark-blue);
   border-radius: 1rem;
+  color: white;
+  cursor: pointer;
   font-size: 2rem;
   font-weight: 600;
-  height: 3rem;
-  padding: 1rem;
+  height: 6rem;
   text-align: center;
-  width: min(80%, 50rem);
+  width: 90%;
 }
 
-.form-container a {
-  all: unset;
-  background-color: var(--bg-light);
-  border: 0.5rem solid var(--bg-light);
-  border-radius: 1rem;
+.button:first-child {
+  margin-bottom: 5%;
+}
+
+.error {
+  color: red;
   font-size: 2rem;
-  font-weight: 900;
-  height: 4rem;
-  padding: 1rem 2rem;
   text-align: center;
-  width: min(80%, 50rem);
+}
+
+.button:disabled {
+  background-color: var(--bg-light);
+}
+
+.button:hover {
+  border: 0.5rem solid var(--light-blue);
+  border-radius: 1rem;
+  box-sizing: border-box;
+  transition: 200ms ease-in;
 }
 
 .login-hero {
-  background-color: black;
-  background-image: url('../../images/cooking-small.jpg');
-  border-radius: 1px 20px 20px 1px;
+  background-color: var(--primary);
+
+  /* background-image: url('https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1630&q=80'); */
+  background-image: url('../../images/moto.avif');
+  background-position: center;
+  background-size: cover;
+  border-radius: 1rem 0.1rem 0.1rem 1rem;
   flex-shrink: 1;
   height: 100%;
   object-fit: cover;
-  width: 95%;
+  width: 50%;
+}
+
+@media ( max-width : 60rem ) {
+
+  .login-container {
+    background-position: center;
+    background-size: cover;
+    border-radius: unset;
+  }
+
+  .login-hero {
+    display: none;
+  }
+
+  .form-container {
+    column-gap: 5%;
+    width: 100%;
+  }
 }

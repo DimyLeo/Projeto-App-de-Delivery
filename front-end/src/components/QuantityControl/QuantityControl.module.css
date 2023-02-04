@@ -1,22 +1,36 @@
 .container {
-  border: 0.1rem solid var(--bg-light);
-  border-radius: 1rem;
+  border: 0.1rem solid var(--dark-blue);
+  border-radius: 1.2rem;
   display: flex;
   flex-direction: row;
-  height: 5rem;
+  height: 4.5rem;
   justify-content: center;
+  margin-top: 2rem;
   width: 100%;
 }
 
 .quantity-controller {
-  background-color: var(--bg-light);
+  align-items: center;
+  background-color: var(--dark-blue);
   border: none;
   border-radius: 1rem;
-  width: 30%;
+  color: var(--secondary);
+  cursor: pointer;
+  display: flex;
+  font-size: 4rem;
+  justify-content: center;
+  width: 35%;
+}
+
+.quantity-controller:hover {
+  background-color: var(--bg-dark);
+  transition: 400ms;
 }
 
 .quantity-display {
+  background-color: var(--hover-header);
   border: none;
+  color: var(--secondary);
   text-align: center;
-  width: 40%;
+  width: 30%;
 }

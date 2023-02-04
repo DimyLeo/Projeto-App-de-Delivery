@@ -1,16 +1,20 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import styles from './Login.module.css';
 import { setLocalStorage } from '../../utils/localStorage';
+import styles from './Login.module.css';
 
 const STYLE_CLASSNAMES = {
   FORM_VALIDATION: 'form-validation',
   FORM_VALIDATION_SUCCESS: 'form-validation__success',
+  FORM_GROUP: 'form-group',
 };
 const BACKEND_PORT = 3001;
 const SUCCESS = 200;
+
+const baseUrl = process.env.BASE_URL || 'http://localhost:3001';
 
 function Login() {
   const [isError, setIsError] = useState([]);
@@ -40,10 +44,11 @@ function Login() {
   };
   const onSubmit = async (data) => {
     try {
+      const endpoint = '/login';
       const {
         data: { response },
         status,
-      } = await axios.post('http://localhost:3001/login', data, {
+      } = await axios.post(`${baseUrl}${endpoint}`, data, {
         port: BACKEND_PORT,
       });
       if (status !== SUCCESS) {
@@ -68,9 +73,12 @@ function Login() {
           onSubmit={ handleSubmit(onSubmit) }
           className={ styles['form-container'] }
         >
-          <label htmlFor="email" className={ styles['form-label'] }>
-            Email
+          <div className={ styles[STYLE_CLASSNAMES.FORM_GROUP] }>
+            <label htmlFor="email" className={ styles['form-label'] }>
+              Email
+            </label>
             <input
+              className={ styles['form-input'] }
               type="email"
               id="email"
               data-testid="common_login__input-email"
@@ -81,7 +89,6 @@ function Login() {
                   message: 'Please enter a valid email!',
                 },
               }) }
-              autoComplete="off"
             />
             <p
               className={ `${styles[STYLE_CLASSNAMES.FORM_VALIDATION]} ${
@@ -90,7 +97,7 @@ function Login() {
                   : ''
               }` }
             >
-              Enter an email
+              Campo obrigatório
             </p>
             <p
               className={ `${styles[STYLE_CLASSNAMES.FORM_VALIDATION]} ${
@@ -99,12 +106,15 @@ function Login() {
                   : ''
               }` }
             >
-              Email must be valid
+              Email deve ser válido
             </p>
-          </label>
-          <label htmlFor="password" className={ styles['form-label'] }>
-            Password
+          </div>
+          <div className={ styles[STYLE_CLASSNAMES.FORM_GROUP] }>
+            <label htmlFor="password" className={ styles['form-label'] }>
+              Senha
+            </label>
             <input
+              className={ styles['form-input'] }
               type="password"
               id="password"
               autoComplete="current-password"
@@ -112,10 +122,6 @@ function Login() {
               { ...register('password', {
                 required: 'Please put a password!',
                 minLength: { value: 6, message: 'Password is too short!' },
-                // pattern: {
-                //   value: /^(?=.*[A-Z])[A-Za-z\d]*$/,
-                //   message: 'Please enter at least one uppercase letter!',
-                // },
               }) }
             />
             <p
@@ -125,7 +131,7 @@ function Login() {
                   : ''
               }` }
             >
-              Enter a password
+              Coloque uma senha
             </p>
             <p
               className={ `${styles[STYLE_CLASSNAMES.FORM_VALIDATION]} ${
@@ -134,41 +140,40 @@ function Login() {
                   : ''
               }` }
             >
-              Password minimum length is at least six characters long
+              Senha deve ter pelo menos 6 caracteres
             </p>
-            {/* <p
-              className={ `${styles[STYLE_CLASSNAMES.FORM_VALIDATION]} ${
-                isPasswordDirty && !passwordErrors?.types?.pattern
-                  ? styles[STYLE_CLASSNAMES.FORM_VALIDATION_SUCCESS]
-                  : ''
-              }` }
+          </div>
+          <div className={ styles[STYLE_CLASSNAMES.FORM_GROUP] }>
+            <button
+              className={ styles.button }
+              type="submit"
+              data-testid="common_login__button-login"
+              disabled={ !isValid }
             >
-              Password must have at least one uppercase letter
-            </p> */}
-          </label>
-          <button
-            type="submit"
-            data-testid="common_login__button-login"
-            disabled={ !isValid }
-          >
-            LOGIN
-          </button>
-          <button
-            type="button"
-            onClick={ () => push('/register') }
-            data-testid="common_login__button-register"
-          >
-            SIGN UP
-          </button>
-          {isError
-            && isError.map((errorMessage) => (
-              <p
-                key="errorMessage"
-                data-testid="common_login__element-invalid-email"
-              >
-                {errorMessage}
-              </p>
-            ))}
+              ENTRAR
+            </button>
+            <button
+              className={ styles.button }
+              type="button"
+              onClick={ () => push('/register') }
+              data-testid="common_login__button-register"
+            >
+              CADASTRAR
+            </button>
+            {isError
+              && isError.map((errorMessage) => (
+                <p
+                  key="errorMessage"
+                  data-testid="common_login__element-invalid-email"
+                  className={ styles.error }
+                >
+                  {
+                    errorMessage
+                      .includes('404') && 'Usuário não cadastrado ou senha incorreta'
+                  }
+                </p>
+              ))}
+          </div>
         </form>
         <div className={ styles['login-hero'] } />
       </main>

@@ -1,64 +1,93 @@
 .container {
   display: flex;
+  font-size: 2rem;
   justify-content: center;
 }
 
 .margin-container {
-  background-color: var(--dark-grenn);
+  background-color: var(--dark-blue);
   display: flex;
-  height: max(8rem, 8vh);
+  height: max(6.5rem, 6.5vh);
   justify-content: space-between;
-  max-width: 160rem;
   width: 100%;
 }
 
 .common-links-container {
-  background-color: var(--light-grenn);
   display: flex;
   justify-content: flex-start;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
   width: 30%;
 }
 
 .role-links-container {
   align-items: center;
-  background-color: var(--purple);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 30%;
+
+  /* padding: 1rem; */
 }
 
 .product-orders {
   align-items: center;
-  background-color: var(--dark-grenn);
   color: var(--secondary);
   cursor: pointer;
   display: flex;
-  font-size: 2rem;
   font-weight: 500;
   justify-content: center;
+  padding-left: 0.8rem;
   text-decoration: none;
   width: 50%;
 }
 
+.product-orders:hover {
+  background-color: var(--hover-header);
+  transition: 400ms;
+}
+
 .user-name {
+  background-color: var(--purple);
+  border-radius: 2rem;
   color: var(--secondary);
-  font-size: 2rem;
   font-weight: 500;
+  margin-right: 2rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   width: 50%;
 }
 
 .logout {
   align-items: center;
-  background-color: var(--light-blue);
+  background-color: var(--logout);
   color: var(--secondary);
   cursor: pointer;
   display: flex;
-  font-size: 2rem;
   font-weight: 500;
   height: 100%;
   justify-content: center;
   text-align: center;
   text-decoration: none;
   width: 50%;
+
+  /* padding: 1rem */
+}
+
+.logout:hover {
+  background-color: var(--hover-logout);
+  transition: 400ms;
+}
+
+@media only screen and ( max-width : 750px ) {
+
+  .container {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and ( max-width : 380px ) {
+
+  .container {
+    font-size: 1.2rem;
+  }
 }

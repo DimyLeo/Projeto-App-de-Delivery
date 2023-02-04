@@ -5,59 +5,61 @@ import styles from './OrderTable.module.css';
 
 function OrderTable({ products, role }) {
   return (
-    <table className={ styles.table }>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Descrição</th>
-          <th>Quantidade</th>
-          <th>Valor Unitário</th>
-          <th>Sub-total</th>
-        </tr>
-      </thead>
-      <tbody>
-        {products.map((product, index) => (
-          <tr key={ product.id }>
-            <td
-              data-testid={
-                `${role}_order_details__element-order-table-item-number-${index}`
-              }
-            >
-              {index}
-            </td>
-            <td
-              data-testid={
-                `${role}_order_details__element-order-table-name-${index}`
-              }
-            >
-              {product.name}
-            </td>
-            <td
-              data-testid={
-                `${role}_order_details__element-order-table-quantity-${index}`
-              }
-            >
-              {product.SalesProduct.quantity}
-            </td>
-            <td
-              data-testid={
-                `${role}_order_details__element-order-table-unit-price-${index}`
-              }
-            >
-              {product.price}
-            </td>
-            <td
-              data-testid={
-                `${role}_order_details__element-order-table-sub-total-${index}`
-              }
-            >
-              {priceFormatter
-                .format(parseFloat(product.price) * product.SalesProduct.quantity)}
-            </td>
+    <div className={ styles.globalTable }>
+      <table className={ styles.table }>
+        <thead className={ styles.thead }>
+          <tr>
+            <th>Item</th>
+            <th>Descrição</th>
+            <th>Quantidade</th>
+            <th>Valor Unitário</th>
+            <th>Sub-total</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody className={ styles.tbody }>
+          {products.map((product, index) => (
+            <tr key={ product.id }>
+              <td
+                data-testid={
+                  `${role}_order_details__element-order-table-item-number-${index}`
+                }
+              >
+                {index}
+              </td>
+              <td
+                data-testid={
+                  `${role}_order_details__element-order-table-name-${index}`
+                }
+              >
+                {product.name}
+              </td>
+              <td
+                data-testid={
+                  `${role}_order_details__element-order-table-quantity-${index}`
+                }
+              >
+                {product.SalesProduct.quantity}
+              </td>
+              <td
+                data-testid={
+                  `${role}_order_details__element-order-table-unit-price-${index}`
+                }
+              >
+                {`R$ ${product.price}`}
+              </td>
+              <td
+                data-testid={
+                  `${role}_order_details__element-order-table-sub-total-${index}`
+                }
+              >
+                {`R$ ${priceFormatter
+                  .format(parseFloat(product.price) * product.SalesProduct.quantity)}`}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
 

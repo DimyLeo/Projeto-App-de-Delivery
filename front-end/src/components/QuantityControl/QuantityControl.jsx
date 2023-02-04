@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import styles from './QuantityControl.module.css';
 import { addToCart, removeFromCart, setToCart } from '../../redux/actions/cartActions';
+import styles from './QuantityControl.module.css';
 
 function QuantityControl({ id, productData }) {
   const [quantity, setQuantity] = useState(0);

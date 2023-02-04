@@ -1,12 +1,18 @@
 .tableCheck {
   align-items: center;
-  background: #e0e0e0;
+  background: var(--bg-tables);
+  border-collapse: collapse;
   border-radius: 1rem;
-  box-shadow: 20px 20px 60px #bebebe , -20px -20px 60px var(--secondary);
+  box-shadow: 20px 20px 60px #00000060 , -20px -20px 60px #00000060;
+  color: var(--secondary);
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 5rem;
+}
+
+.thead {
+  margin-top: 2rem;
 }
 
 .tableCheck th {
@@ -16,7 +22,6 @@
 }
 
 .tableCheck td {
-  box-shadow: 0 6px 14px 0 rgba(59, 58, 58, 0.75);
   color: var(--secondary);
   font-size: 1.5rem;
   padding-bottom: 0.6rem;
@@ -25,7 +30,7 @@
 }
 
 .price {
-  background-color: var(--dark-grenn);
+  background-color: var(--dark-blue);
   border-radius: 0.5rem;
   color: var(--secondary);
   margin: 2rem;
@@ -63,7 +68,6 @@
 
 .tableCheck td:nth-child( 1 ) {
   background-color: var(--light-grenn);
-  border-radius: 1rem 0 0 1rem;
   color: var(--primary);
   width: 5rem;
 }
@@ -75,7 +79,7 @@
 }
 
 .tableCheck td:nth-child( 3 ) {
-  background-color: var(--dark-grenn);
+  background-color: var(--dark-blue);
   width: 15rem;
 }
 
@@ -90,8 +94,82 @@
 }
 
 .tableCheck td:nth-child( 6 ) {
-  background-color: var(--light-grenn);
-  border-radius: 0 1rem 1rem 0;
+  background-color: var(--logout);
   padding: 0;
 }
 
+@media only screen and ( max-width : 1000px ) {
+
+  .tableCheck .thead {
+    display: none;
+  }
+
+  .tableCheck .tbody tr {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+  }
+
+  .tableCheck td:nth-child( 1 ) {
+    background-color: var(--dark-blue);
+    border-radius: 1rem 1rem 0 0;
+    color: var(--secondary);
+    width: 25rem;
+  }
+
+  .tableCheck td:nth-child( 1 ):before {
+    content: 'Item:  ';
+    display: inline-block;
+  }
+
+  .tableCheck td:nth-child( 2 ) {
+    background-color: var(--dark-blue);
+    color: var(--secondary);
+    width: 25rem;
+  }
+
+  .tableCheck td:nth-child( 2 ):before {
+    content: 'Descrição:  ';
+    display: inline-block;
+  }
+
+  .tableCheck td:nth-child( 3 ) {
+    background-color: var(--dark-blue);
+    color: var(--secondary);
+    width: 25rem;
+  }
+
+  .tableCheck td:nth-child( 3 ):before {
+    content: 'Quantidade:  ';
+    display: inline-block;
+  }
+
+  .tableCheck td:nth-child( 4 ) {
+    background-color: var(--dark-blue);
+    color: var(--secondary);
+    width: 25rem;
+  }
+
+  .tableCheck td:nth-child( 4 ):before {
+    content: 'Valor Unitário:  ';
+    display: inline-block;
+  }
+
+  .tableCheck td:nth-child( 5 ) {
+    background-color: var(--dark-blue);
+    color: var(--secondary);
+    width: 25rem;
+  }
+
+  .tableCheck td:nth-child( 5 ):before {
+    content: 'Sub-total:  ';
+    display: inline-block;
+  }
+
+  .tableCheck td:nth-child( 6 ) {
+    background-color: var(--logout);
+    border-radius: 0 0 1rem 1rem;
+    color: var(--secondary);
+    width: 25.2rem;
+  }
+}

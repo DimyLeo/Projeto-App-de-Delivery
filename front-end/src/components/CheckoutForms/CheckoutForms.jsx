@@ -7,9 +7,12 @@ import useFetch from '../../hooks/useFetch';
 import { getLocalStorage } from '../../utils/localStorage';
 import styles from './CheckoutForms.module.css';
 
+const baseUrl = process.env.BASE_URL || 'http://localhost:3001';
+
+const endpointGet = '/users';
 const fetchOptions = {
   method: 'get',
-  url: 'http://localhost:3001/users',
+  url: `${baseUrl}${endpointGet}`,
   headers: { Authorization: getLocalStorage('user')?.token },
 };
 
@@ -60,9 +63,10 @@ function CheckoutForms({ totalPrice, products }) {
         sellerId: formData.seller,
       };
 
+      const endpointPost = '/customer/checkout';
       const postOptions = {
         method: 'post',
-        url: 'http://localhost:3001/customer/checkout',
+        url: `${baseUrl}${endpointPost}`,
         headers: { Authorization: getLocalStorage('user')?.token },
         data: payload,
       };
@@ -116,7 +120,7 @@ function CheckoutForms({ totalPrice, products }) {
         <label className={ styles[STYLE_CLASSNAMES.FORM_LABEL] } htmlFor="select">
           <span>P.Vendedora Responsável:</span>
           <select
-            className={ styles.inputs }
+            className={ styles.inputRole }
             { ...register('seller') }
             data-testid="customer_checkout__select-seller"
           >
