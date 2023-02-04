@@ -1,6 +1,6 @@
 .links {
   align-items: center;
-  color: var(--primary);
+  color: var(--secondary);
   cursor: pointer;
   display: flex;
   font-size: 2rem;
@@ -9,10 +9,11 @@
   text-align: center;
   text-decoration: none;
   width: 50%;
+  border-right: 0.1rem solid var(--secondary);
 }
 
 .links:hover {
-  background-color: var(--hover-grenn-dark);
+  background-color: var(--hover-header);
   color: var(--secondary);
   transition: 400ms;
 }

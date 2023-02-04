@@ -1,19 +1,25 @@
 .container {
-  border: 0.1rem solid var(--bg-light);
-  border-radius: 1rem;
+  border: 0.1rem solid var(--dark-blue);
+  border-radius: 1.2rem;
   display: flex;
   flex-direction: row;
-  height: 5rem;
+  height: 4.5rem;
   justify-content: center;
   width: 100%;
+  margin-top: 2rem;
 }
 
 .quantity-controller {
-  background-color: var(--bg-light);
+  color: var(--secondary);
+  background-color: var(--dark-blue);
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 1rem;
   cursor: pointer;
-  width: 30%;
+  width: 35%;
 }
 
 .quantity-controller:hover {
@@ -22,7 +28,9 @@
 }
 
 .quantity-display {
+  background-color: var(--hover-header);
+  color: var(--secondary);
   border: none;
   text-align: center;
-  width: 40%;
+  width: 30%;
 }

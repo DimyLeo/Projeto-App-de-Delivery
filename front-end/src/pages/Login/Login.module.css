@@ -1,6 +1,7 @@
 .login-page {
   animation: zoom 7000ms infinite ease-in-out;
-  background-image: url('https://images.unsplash.com/photo-1488342994276-7c3bc0742042?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80');
+  /* background-image: url('https://images.unsplash.com/photo-1488342994276-7c3bc0742042?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80'); */
+  background-image: url('../../images/background.avif');
   background-position: center;
   background-size: cover;
   display: grid;
@@ -25,12 +26,12 @@
 
 .login-container {
   background-color: var(--secondary);
-  border-radius: 2rem;
+  border-radius: 1rem;
   display: flex;
   filter: drop-shadow(0.1rem 0.1rem 1rem black);
   flex-direction: row-reverse;
   height: 100%;
-  max-height: 96rem;
+  max-height: 75rem;
   max-width: 130rem;
   width: 100%;
 }
@@ -78,6 +79,7 @@
   height: 6rem;
   padding: 1rem 2rem;
   width: 100%;
+  text-align: center;
 }
 
 .form-input:focus {
@@ -104,13 +106,13 @@
 
 .button {
   all: unset;
-  background-color: var(--dark-grenn);
+  background-color: var(--dark-blue);
   border-radius: 1rem;
   color: white;
   cursor: pointer;
   font-size: 2rem;
   font-weight: 600;
-  height: 3rem;
+  height: 6rem;
   text-align: center;
   width: 90%;
 }
@@ -133,15 +135,16 @@
   border: 0.5rem solid var(--light-blue);
   border-radius: 1rem;
   box-sizing: border-box;
-  transition: ease-in;
+  transition: 200ms ease-in;
 }
 
 .login-hero {
   background-color: var(--primary);
-  background-image: url('https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1630&q=80');
+  /* background-image: url('https://images.unsplash.com/photo-1617347454431-f49d7ff5c3b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1630&q=80'); */
+  background-image: url('../../images/moto.avif');
   background-position: center;
   background-size: cover;
-  border-radius: 2rem 0.1rem 0.1rem 2rem;
+  border-radius: 1rem 0.1rem 0.1rem 1rem;
   flex-shrink: 1;
   height: 100%;
   object-fit: cover;

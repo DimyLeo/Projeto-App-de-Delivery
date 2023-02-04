@@ -1,8 +1,9 @@
 .manager-users {
   align-items: center;
-  background: #e0e0e0;
-  border-radius: 1rem;
-  box-shadow: 20px 20px 60px #bebebe , -20px -20px 60px var(--secondary);
+  background: var(--bg-tables);
+  border-radius: 0.5rem;
+  box-shadow: 20px 20px 60px #00000060 , -20px -20px 60px #00000060;
+  color: var(--secondary);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +47,7 @@
 }
 
 .table td:nth-child( 3 ) {
-  background-color: var(--dark-grenn);
+  background-color: var(--dark-blue);
 }
 
 .table td:nth-child( 4 ) {
@@ -54,7 +55,7 @@
 }
 
 .table td:nth-child( 5 ) {
-  background-color: var(--light-blue);
+  background-color: var(--logout);
   padding: 0;
 }
 
@@ -106,7 +107,7 @@
   }
 
   .table td:nth-child( 1 ) {
-    background-color: var(--dark-grenn);
+    background-color: var(--dark-blue);
     border-radius: 1rem 1rem 0 0;
     color: var(--secondary);
   }
@@ -117,7 +118,7 @@
   }
 
   .table td:nth-child( 2 ) {
-    background-color: var(--dark-grenn);
+    background-color: var(--dark-blue);
     color: var(--secondary);
   }
 
@@ -127,7 +128,7 @@
   }
 
   .table td:nth-child( 3 ) {
-    background-color: var(--dark-grenn);
+    background-color: var(--dark-blue);
     color: var(--secondary);
   }
 
@@ -137,7 +138,7 @@
   }
 
   .table td:nth-child( 4 ) {
-    background-color: var(--dark-grenn);
+    background-color: var(--dark-blue);
     color: var(--secondary);
   }
 
@@ -147,7 +148,7 @@
   }
 
   .table td:nth-child( 5 ) {
-    background-color: var(--light-blue);
+    background-color: var(--logout);
     border-radius: 0 0 1rem 1rem;
     color: var(--secondary);
     padding: 0.5rem;

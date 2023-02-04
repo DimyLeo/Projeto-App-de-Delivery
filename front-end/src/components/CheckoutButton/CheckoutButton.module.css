@@ -1,24 +1,24 @@
 .checkout {
   align-items: center;
-  background-color: var(--dark-grenn);
+  background-color: var(--car-normal);
   border: 50%;
   border-radius: 1rem;
   bottom: 5vh;
   cursor: pointer;
   display: flex;
   font-size: 2.5rem;
-  height: 10rem;
+  height: 8rem;
   justify-content: center;
   position: sticky;
   width: 29rem;
 }
 
 .checkout:has( .navbutton:disabled ) {
-  background-color: var(--gray);
+  background-color: var(--car-disable);
 }
 
 .navbutton {
-  background-color: var(--dark-grenn);
+  background-color: var(--car-normal);
   border: none;
   color: var(--secondary);
   cursor: pointer;
@@ -26,6 +26,6 @@
 }
 
 .navbutton:disabled {
-  background-color: var(--gray);
+  background-color: var(--car-disable);
   cursor: default;
 }

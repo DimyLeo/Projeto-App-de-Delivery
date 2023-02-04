@@ -1,6 +1,9 @@
-.login-page {
+.register-page {
   align-items: center;
-  background-color: var(--bg-light);
+  animation: zoom 7000ms infinite ease-in-out;
+  background-image: url('../../images/background.avif');
+  background-position: center;
+  background-size: cover;
   color: black;
   display: flex;
   height: 100vh;
@@ -8,16 +11,36 @@
   width: 100%;
 }
 
-.login-container {
+@keyframes zoom {
+
+  0% {
+    background-size: 100%;
+  }
+
+  50% {
+    background-size: 105%;
+  }
+
+  100% {
+    background-size: 100%;
+  }
+}
+
+.register-container {
   align-items: center;
   align-self: center;
-  background-color: white;
-  border-radius: 20px;
+  background-color: var(--secondary);
+  border-radius: 1rem;
   display: flex;
   filter: drop-shadow(0.5rem 0.5rem 2rem var(--bg-dark));
-  flex-direction: row;
-  height: 92%;
-  width: 60%;
+  flex-direction: column;
+  height: 85%;
+  width: 45%;
+}
+
+.register-container h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
 }
 
 .form-container {
@@ -33,7 +56,7 @@
 .form-label {
   display: flex;
   flex-direction: column;
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-align: center;
   width: 80%;
 }
@@ -42,16 +65,22 @@
   all: unset;
   border: 0.3rem solid var(--bg-light);
   border-radius: 1rem;
-  font-size: 2rem;
-  height: 4rem;
-  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  height: 3rem;
+  padding: 1rem;
+  width: 70%;
+  margin: auto;
+}
+
+.form-label input:focus {
+  border: 0.3rem solid var(--light-blue);
 }
 
 .form-label p {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   height: 1rem;
   margin-left: 2rem;
-  text-align: start;
+  text-align: center;
 }
 
 .form-validation {
@@ -65,8 +94,9 @@
 
 .form-container button {
   all: unset;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-tables);
   border: 0.5rem solid var(--bg-light);
+  color: var(--secondary);
   border-radius: 1rem;
   font-size: 2rem;
   font-weight: 600;
@@ -76,8 +106,14 @@
   width: min(80%, 50rem);
 }
 
+.form-container button:hover {
+  background-color: var(--hover-header);
+  transition: 400ms;
+}
+
 .form-container button:disabled {
   background-color: var(--bg-light);
+  color: var(--primary);
 }
 
 .form-container a {
@@ -93,12 +129,23 @@
   width: min(80%, 50rem);
 }
 
-.login-hero {
-  background-color: black;
-  background-image: url('../../images/cooking-small.jpg');
-  border-radius: 6% 3% 3% 6%;
-  flex-shrink: 1;
-  height: 100%;
-  object-fit: cover;
-  width: 95%;
+@media only screen and ( max-width : 600px ) {
+  .register-container {
+    width: 85%;
+  }
+
+  .register-container h1 {
+    font-size: 2rem;
+  }
+
+  .form-label {
+    font-size: 1.5rem;
+  }
+
+  .form-container button {
+    font-size: 1.5rem;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    width: min(55%, 50rem);
+  }
 }

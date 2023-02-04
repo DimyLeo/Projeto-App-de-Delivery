@@ -1,5 +1,5 @@
 .button {
-  background: none;
+  background: var(--logout);
   border: none;
   color: var(--secondary);
   cursor: pointer;

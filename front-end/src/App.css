@@ -13,33 +13,36 @@
 
   --green: green;
 
-  --bg-dark: #b3ada7;
+  --bg-dark: #1F1C27;
 
   --bg-light: #e0e0e0;
 
-  --grenn-status: #ccb800;
+  --green-status: #ccb800;
 
-  --light-grenn: #2FC18C;
+  --light-grenn: #DBD8E3;
 
-  --dark-grenn: #036B52;
+  --dark-blue: #312c3d;
 
-  --purple: #421981;
+  --purple: #555063;
 
-  --light-blue: #056CF9;
+  --light-blue: #766D8D;
 
   --data-value: #f2fffcbf;
-  
-  --head-order: #d1d1d1;
 
-  --hover-grenn-light: #0b8b6e;
+  --bg-tables: #413a52;
 
-  --hover-grenn-dark: #00523f;
+  --car-normal: #484158;
 
-  --hover-blue: #104fa8;
+  --car-disable: #71658e;
+
+  --hover-header: #584e71;
+
+  --logout: #7b2a2a;
+
+  --hover-logout: #9f4242;
 
   --title-font: 'Montserrat' , sans-serif;
 }
-
 
 html {
   border: 0;

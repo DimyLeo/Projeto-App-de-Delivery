@@ -4,9 +4,9 @@
 }
 
 .container {
-  background-color: var(--bg-light);
+  background: var(--bg-tables);
   border-radius: 0.5rem;
-  box-shadow: 20px 20px 60px #bebebe , 20px -10px 60px var(--secondary);
+  box-shadow: 20px 20px 60px #00000060 , -20px -20px 60px #00000060;
   display: flex;
   max-height: 12rem;
   max-width: 45rem;
@@ -26,38 +26,41 @@
 .id {
   align-items: center;
   background-color: var(--secondary);
-  border-radius: 0.5rem 0 0.5rem 0.5rem;
+  border-radius: 0.5rem 0 0 0.5rem;
   display: flex;
   flex-wrap: wrap;
   height: 8rem;
   justify-content: center;
   max-width: 6rem;
   min-width: 2rem;
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
+  margin: 0.5rem;
 }
 
 .statusSeller {
   align-items: center;
-  background-color: var(--grenn-status);
-  border-radius: 0 0.5rem 0.5rem;
+  background-color: var(--green-status);
+  border-radius: 0 0.5rem 0.5rem 0;
   display: flex;
   font-weight: 500;
   height: 7rem;
   justify-content: center;
   max-width: 14rem;
   min-width: 8rem;
+  margin: 0.5rem;
 }
 
 .statusCustomer {
   align-items: center;
-  background-color: var(--grenn-status);
-  border-radius: 0 0.5rem 0.5rem;
+  background-color: var(--green-status);
+  border-radius: 0 0.5rem 0.5rem 0;
   display: flex;
   font-weight: 500;
-  height: 12rem;
+  height: 11rem;
   justify-content: center;
   width: 14rem;
+  margin: 0.5rem;
 }
 
 .order-data {
@@ -94,6 +97,7 @@
 }
 
 .address {
+  color: var(--secondary);
   margin-left: -6rem;
   margin-right: 1rem;
 }

@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header';
 import OrderTable from '../../components/OrderTable/OrderTable';
 import useFetch from '../../hooks/useFetch';
 import { priceFormatter } from '../../utils/dataFormat';
+import fetchGet from '../../utils/fetchGet';
 import { getLocalStorage } from '../../utils/localStorage';
 import styles from './OrderDetail.module.css';
 
@@ -15,19 +16,16 @@ const numberFormatter = new Intl.NumberFormat('pt-BR', {
 
 const dateFormatter = new Intl.DateTimeFormat('pt-br');
 
+const baseUrl = process.env.BASE_URL || 'http://localhost:3001';
+
 function OrderDetail() {
   const {
     params: { id },
   } = useRouteMatch();
   const userData = useMemo(() => getLocalStorage('user'), []);
-  const fetchOptions = useMemo(
-    () => ({
-      method: 'get',
-      url: `http://localhost:3001/customer/orders/${id}`,
-      headers: { Authorization: userData.token },
-    }),
-    [id, userData],
-  );
+
+  const endpoint = `/customer/orders/${id}`;
+  const fetchOptions = useMemo(() => (fetchGet(endpoint)), [endpoint]);
 
   const DATA_TESTID = {
     orderId: `${userData.role}_order_details__element-order-details-label-order-id`,
@@ -47,7 +45,7 @@ function OrderDetail() {
 
   const handleUpdateOrder = async (status) => {
     const updateOptions = {
-      url: `http://localhost:3001/checkout/${id}`,
+      url: `${baseUrl}/checkout/${id}`,
       method: 'put',
       data: { status },
       headers: { Authorization: getLocalStorage('user')?.token },

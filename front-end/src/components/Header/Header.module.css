@@ -5,32 +5,32 @@
 }
 
 .margin-container {
-  background-color: var(--dark-grenn);
+  background-color: var(--dark-blue);
   display: flex;
-  height: max(8rem, 8vh);
+  justify-content: center;
+  height: max(6.5rem, 6.5vh);
   justify-content: space-between;
-  min-width: none;
   width: 100%;
 }
 
 .common-links-container {
-  background-color: var(--light-grenn);
   display: flex;
   justify-content: flex-start;
   width: 30%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .role-links-container {
   align-items: center;
-  background-color: var(--purple);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 30%;
+  /* padding: 1rem; */
 }
 
 .product-orders {
   align-items: center;
-  background-color: var(--dark-grenn);
   color: var(--secondary);
   cursor: pointer;
   display: flex;
@@ -42,8 +42,7 @@
 }
 
 .product-orders:hover {
-  background-color: var(--hover-grenn-light);
-  color: var(--primary);
+  background-color: var(--hover-header);
   transition: 400ms;
 }
 
@@ -52,11 +51,14 @@
   font-weight: 500;
   text-align: center;
   width: 50%;
+  margin-right: 2rem;
+  background-color: var(--purple);
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
 }
 
 .logout {
   align-items: center;
-  background-color: var(--light-blue);
   color: var(--secondary);
   cursor: pointer;
   display: flex;
@@ -66,10 +68,12 @@
   text-align: center;
   text-decoration: none;
   width: 50%;
+  background-color: var(--logout);
+  /* padding: 1rem */
 }
 
 .logout:hover {
-  background-color: var(--hover-blue);
+  background-color: var(--hover-logout);
   transition: 400ms;
 }
 

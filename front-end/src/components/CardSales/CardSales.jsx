@@ -3,7 +3,7 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
-import styles from './Card.module.css';
+import styles from './CardSales.module.css';
 
 function CardSales({ order, role, dataTestid }) {
   const { id, status, saleDate, totalPrice, deliveryAddress, deliveryNumber } = order;

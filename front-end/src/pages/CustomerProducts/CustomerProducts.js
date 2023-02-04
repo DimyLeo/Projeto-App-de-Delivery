@@ -3,15 +3,13 @@ import CheckoutButton from '../../components/CheckoutButton/CheckoutButton';
 import Header from '../../components/Header/Header';
 import Product from '../../components/Product/Product';
 import useFetch from '../../hooks/useFetch';
-import { getLocalStorage } from '../../utils/localStorage';
+import fetchGet from '../../utils/fetchGet';
 import styles from './CustomerProducts.module.css';
 
 function CustomerProducts() {
-  const fetchOptions = useMemo(() => ({
-    method: 'get',
-    url: 'http://localhost:3001/products',
-    headers: { Authorization: getLocalStorage('user')?.token },
-  }), []);
+  const endpoint = '/products';
+  const fetchOptions = useMemo(() => (fetchGet(endpoint)), []);
+
   const [data, isLoading] = useFetch(fetchOptions);
 
   const products = data?.data;

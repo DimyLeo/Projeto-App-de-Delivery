@@ -1,8 +1,9 @@
 .form-container {
   align-items: center;
-  background: #e0e0e0;
+  background: var(--bg-tables);
+  color: var(--secondary);
   border-radius: 1rem;
-  box-shadow: 20px 20px 60px #bebebe , -20px -20px 60px var(--secondary);
+  box-shadow: 20px 20px 60px #00000060 , -20px -20px 60px #00000060;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +13,7 @@
 }
 
 .button {
-  background-color: var(--dark-grenn);
+  background-color: var(--dark-blue);
   border: none;
   border-radius: 0.5rem;
   color: var(--secondary);
@@ -22,7 +23,7 @@
 }
 
 .button:hover {
-  background-color: var(--hover-grenn-light);
+  background-color: var(--hover-header);
   transition: 400ms;
 }
 
