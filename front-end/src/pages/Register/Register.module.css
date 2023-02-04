@@ -30,7 +30,7 @@
   align-items: center;
   align-self: center;
   background-color: var(--secondary);
-  border-radius: 1rem;
+  border-radius: 3rem;
   display: flex;
   filter: drop-shadow(0.5rem 0.5rem 2rem var(--bg-dark));
   flex-direction: column;
@@ -64,7 +64,7 @@
 .form-label input {
   all: unset;
   border: 0.3rem solid var(--bg-light);
-  border-radius: 1rem;
+  border-radius: 3rem;
   font-size: 1.6rem;
   height: 3rem;
   margin: auto;
@@ -94,10 +94,10 @@
 
 .form-container button {
   all: unset;
-  background-color: var(--bg-tables);
-  border: 0.5rem solid var(--bg-light);
-  border-radius: 1rem;
-  color: var(--secondary);
+  background-color: var(--bg-light);
+  border: 0.5rem solid var(--bg-dark);
+  border-radius: 3rem;
+  color: var(--primary);
   font-size: 2rem;
   font-weight: 600;
   height: 4rem;
@@ -120,7 +120,7 @@
   all: unset;
   background-color: var(--bg-light);
   border: 0.5rem solid var(--bg-light);
-  border-radius: 1rem;
+  border-radius: 3rem;
   font-size: 2rem;
   font-weight: 900;
   height: 4rem;

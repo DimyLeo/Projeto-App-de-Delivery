@@ -1,6 +1,6 @@
 .container {
   border: 0.1rem solid var(--dark-blue);
-  border-radius: 1.2rem;
+  border-radius: 3rem;
   display: flex;
   flex-direction: row;
   height: 4.5rem;
@@ -11,9 +11,10 @@
 
 .quantity-controller {
   align-items: center;
-  background-color: var(--dark-blue);
+  background-color: var(--light-grenn);
   border: none;
-  border-radius: 1rem;
+
+  /* border-radius: 1rem 0 0 1rem; */
   color: var(--secondary);
   cursor: pointer;
   display: flex;
@@ -23,14 +24,21 @@
 }
 
 .quantity-controller:hover {
-  background-color: var(--bg-dark);
+  background-color: var(--data-value);
   transition: 400ms;
 }
 
+.quantity-controller:first-child {
+  border-radius: 3rem 0 0 3rem;
+}
+
+.quantity-controller:last-child {
+  border-radius: 0 3rem 3rem 0;
+}
+
 .quantity-display {
-  background-color: var(--hover-header);
   border: none;
-  color: var(--secondary);
+  color: var(--primary);
   text-align: center;
   width: 30%;
 }

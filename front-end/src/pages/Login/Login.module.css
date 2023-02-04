@@ -27,7 +27,7 @@
 
 .login-container {
   background-color: var(--secondary);
-  border-radius: 1rem;
+  border-radius: 3rem;
   display: flex;
   filter: drop-shadow(0.1rem 0.1rem 1rem black);
   flex-direction: row-reverse;
@@ -74,7 +74,7 @@
 .form-input {
   all: unset;
   border: 0.3rem solid var(--bg-light);
-  border-radius: 1rem;
+  border-radius: 3rem;
   box-sizing: border-box;
   font-size: 2rem;
   height: 6rem;
@@ -108,7 +108,7 @@
 .button {
   all: unset;
   background-color: var(--dark-blue);
-  border-radius: 1rem;
+  border-radius: 3rem;
   color: white;
   cursor: pointer;
   font-size: 2rem;
@@ -134,7 +134,7 @@
 
 .button:hover {
   border: 0.5rem solid var(--light-blue);
-  border-radius: 1rem;
+  border-radius: 3rem;
   box-sizing: border-box;
   transition: 200ms ease-in;
 }

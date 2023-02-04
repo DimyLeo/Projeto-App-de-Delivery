@@ -1,8 +1,8 @@
 .checkout {
   align-items: center;
-  background-color: var(--car-normal);
+  background-color: var(--dark-blue);
   border: 50%;
-  border-radius: 1rem;
+  border-radius: 3rem;
   bottom: 5vh;
   cursor: pointer;
   display: flex;
@@ -14,11 +14,11 @@
 }
 
 .checkout:has( .navbutton:disabled ) {
-  background-color: var(--car-disable);
+  background-color: var(--gray);
 }
 
 .navbutton {
-  background-color: var(--car-normal);
+  background-color: var(--dark-blue);
   border: none;
   color: var(--secondary);
   cursor: pointer;
@@ -26,6 +26,6 @@
 }
 
 .navbutton:disabled {
-  background-color: var(--car-disable);
+  background-color: var(--gray);
   cursor: default;
 }

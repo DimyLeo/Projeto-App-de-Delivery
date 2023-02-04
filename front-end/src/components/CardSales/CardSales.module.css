@@ -4,9 +4,9 @@
 }
 
 .container {
-  background: var(--bg-tables);
-  border-radius: 0.5rem;
-  box-shadow: 20px 20px 60px #00000060 , -20px -20px 60px #00000060;
+  background: var(--bg-light);
+  border-radius: 3rem;
+  box-shadow: 20px 20px 60px #00000010 , -20px -20px 60px #00000010;
   display: flex;
   max-height: 12rem;
   max-width: 45rem;
@@ -26,7 +26,7 @@
 .id {
   align-items: center;
   background-color: var(--secondary);
-  border-radius: 0.5rem 0 0 0.5rem;
+  border-radius: 3rem 0 0 3rem;
   display: flex;
   flex-wrap: wrap;
   height: 8rem;
@@ -41,7 +41,7 @@
 .statusSeller {
   align-items: center;
   background-color: var(--green-status);
-  border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0 3rem 3rem 0;
   display: flex;
   font-weight: 500;
   height: 7rem;
@@ -54,7 +54,7 @@
 .statusCustomer {
   align-items: center;
   background-color: var(--green-status);
-  border-radius: 0 0.5rem 0.5rem 0;
+  border-radius: 0 3rem 3rem 0;
   display: flex;
   font-weight: 500;
   height: 11rem;
@@ -75,7 +75,7 @@
 .dateValueSeller {
   align-items: center;
   background-color: var(--data-value);
-  border-radius: 0.5rem;
+  border-radius: 3rem;
   display: flex;
   font-weight: 500;
   height: 2.7rem;
@@ -87,7 +87,7 @@
 .dateValueCustomer {
   align-items: center;
   background-color: var(--data-value);
-  border-radius: 0.5rem;
+  border-radius: 3rem;
   display: flex;
   font-weight: 500;
   height: 5rem;
@@ -97,7 +97,7 @@
 }
 
 .address {
-  color: var(--secondary);
+  color: var(--primary);
   margin-left: -6rem;
   margin-right: 1rem;
 }

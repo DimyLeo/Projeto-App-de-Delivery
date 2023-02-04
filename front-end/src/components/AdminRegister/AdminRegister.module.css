@@ -1,9 +1,9 @@
 .register-container {
   align-items: center;
-  background: var(--bg-tables);
-  border-radius: 0.5rem;
-  box-shadow: 20px 20px 60px #00000060 , -20px -20px 60px #00000060;
-  color: var(--secondary);
+  background: var(--bg-light);
+  border-radius: 3rem;
+  box-shadow: 20px 20px 60px #0000002d , -20px -20px 60px #0000002d;
+  color: var(--primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,14 +33,14 @@
 
 .inputs {
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 3rem;
   padding: 0.8rem 1rem;
   width: 15rem;
 }
 
 .input-role {
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 3rem;
   height: 3.1rem;
   padding: 0.8rem 1rem;
   width: 17rem;
@@ -49,7 +49,7 @@
 .button {
   background-color: var(--dark-blue);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 3rem;
   color: var(--secondary);
   cursor: pointer;
   padding: 0 3rem;
@@ -98,7 +98,7 @@
   .button {
     background-color: var(--dark-blue);
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 3rem;
     color: var(--secondary);
     margin: 1.5rem auto;
     padding: 0.8rem 1rem;
@@ -107,7 +107,7 @@
 
   .input-role {
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 3rem;
     height: 3.1rem;
     padding: 0.8rem 1rem;
     width: 22rem;

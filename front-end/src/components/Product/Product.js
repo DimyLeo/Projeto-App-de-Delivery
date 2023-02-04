@@ -8,7 +8,10 @@ function Product({ product }) {
   return (
     <div className={ styles['margin-container'] }>
       <div className={ styles.container }>
-        <span data-testid={ `customer_products__element-card-price-${id}` }>
+        <span
+          className={ styles['product-price'] }
+          data-testid={ `customer_products__element-card-price-${id}` }
+        >
           {Intl.NumberFormat('pt-BR', {
             style: 'currency',
             currency: 'BRL',

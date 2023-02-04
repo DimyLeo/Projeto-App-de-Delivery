@@ -47,7 +47,7 @@
 }
 
 .user-name {
-  background-color: var(--purple);
+  background-color: var(--hover-header);
   border-radius: 2rem;
   color: var(--secondary);
   font-weight: 500;
