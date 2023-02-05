@@ -5,7 +5,6 @@ import Header from '../../components/Header/Header';
 import OrderTable from '../../components/OrderTable/OrderTable';
 import useFetch from '../../hooks/useFetch';
 import { priceFormatter } from '../../utils/dataFormat';
-import fetchGet from '../../utils/fetchGet';
 import { getLocalStorage } from '../../utils/localStorage';
 import styles from './OrderDetail.module.css';
 
@@ -25,7 +24,11 @@ function OrderDetail() {
   const userData = useMemo(() => getLocalStorage('user'), []);
 
   const endpoint = `/customer/orders/${id}`;
-  const fetchOptions = useMemo(() => (fetchGet(endpoint)), [endpoint]);
+  const fetchOptions = useMemo(() => ({
+    method: 'get',
+    url: `${baseUrl}${endpoint}`,
+    headers: { Authorization: getLocalStorage('user')?.token },
+  }), [endpoint]);
 
   const DATA_TESTID = {
     orderId: `${userData.role}_order_details__element-order-details-label-order-id`,

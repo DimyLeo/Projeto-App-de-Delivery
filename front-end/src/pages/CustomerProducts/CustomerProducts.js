@@ -3,12 +3,17 @@ import CheckoutButton from '../../components/CheckoutButton/CheckoutButton';
 import Header from '../../components/Header/Header';
 import Product from '../../components/Product/Product';
 import useFetch from '../../hooks/useFetch';
-import fetchGet from '../../utils/fetchGet';
 import styles from './CustomerProducts.module.css';
+
+const baseUrl = process.env.BASE_URL || 'http://localhost:3001';
 
 function CustomerProducts() {
   const endpoint = '/products';
-  const fetchOptions = useMemo(() => (fetchGet(endpoint)), []);
+  const fetchOptions = useMemo(() => ({
+    method: 'get',
+    url: `${baseUrl}${endpoint}`,
+    headers: { Authorization: getLocalStorage('user')?.token },
+  }), []);
 
   const [data, isLoading] = useFetch(fetchOptions);
 
