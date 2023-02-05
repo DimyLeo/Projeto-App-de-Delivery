@@ -3,6 +3,7 @@ import CheckoutButton from '../../components/CheckoutButton/CheckoutButton';
 import Header from '../../components/Header/Header';
 import Product from '../../components/Product/Product';
 import useFetch from '../../hooks/useFetch';
+import { getLocalStorage } from '../../utils/localStorage';
 import styles from './CustomerProducts.module.css';
 
 const baseUrl = process.env.BASE_URL || 'https://back-end-delivery.up.railway.app';
