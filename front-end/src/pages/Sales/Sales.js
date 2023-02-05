@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import CardSales from '../../components/CardSales/CardSales';
 import Header from '../../components/Header/Header';
 import useFetch from '../../hooks/useFetch';
+import { getLocalStorage } from '../../utils/localStorage';
 import styles from './Sales.module.css';
 
 const baseUrl = process.env.BASE_URL || 'https://back-end-delivery.up.railway.app';
