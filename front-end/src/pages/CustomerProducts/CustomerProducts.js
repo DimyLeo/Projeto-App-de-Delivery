@@ -6,7 +6,7 @@ import useFetch from '../../hooks/useFetch';
 import { getLocalStorage } from '../../utils/localStorage';
 import styles from './CustomerProducts.module.css';
 
-const baseUrl = process.env.BASE_URL || 'https://back-end-delivery.up.railway.app';
+const baseUrl = process.env.REACT_APP_BASE_URL || 'https://back-end-delivery.up.railway.app';
 
 function CustomerProducts() {
   const endpoint = '/products';
