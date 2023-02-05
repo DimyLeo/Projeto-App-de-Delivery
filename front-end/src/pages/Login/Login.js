@@ -14,7 +14,7 @@ const STYLE_CLASSNAMES = {
 const BACKEND_PORT = 3001;
 const SUCCESS = 200;
 
-const baseUrl = process.env.BASEURL || 'http://localhost:3001';
+const baseUrl = process.env.BASE_URL || 'https://back-end-delivery.up.railway.app';
 
 function Login() {
   const [isError, setIsError] = useState([]);
