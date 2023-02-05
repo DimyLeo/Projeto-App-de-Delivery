@@ -4,7 +4,7 @@ import Header from '../../components/Header/Header';
 import useFetch from '../../hooks/useFetch';
 import styles from './Sales.module.css';
 
-const baseUrl = process.env.BASE_URL || 'http://localhost:3001';
+const baseUrl = process.env.BASE_URL || 'https://back-end-delivery.up.railway.app';
 const role = 'seller';
 
 function Sales() {

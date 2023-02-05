@@ -5,7 +5,7 @@ import Product from '../../components/Product/Product';
 import useFetch from '../../hooks/useFetch';
 import styles from './CustomerProducts.module.css';
 
-const baseUrl = process.env.BASE_URL || 'http://localhost:3001';
+const baseUrl = process.env.BASE_URL || 'https://back-end-delivery.up.railway.app';
 
 function CustomerProducts() {
   const endpoint = '/products';

@@ -9,7 +9,7 @@ const STYLE_CLASSNAMES = {
   FORM_LABEL: 'form-label',
 };
 
-const baseUrl = process.env.BASE_URL || 'http://localhost:3001';
+const baseUrl = process.env.BASE_URL || 'https://back-end-delivery.up.railway.app';
 
 function AdminRegister({ setRefetch }) {
   const [isError, setIsError] = useState([]);

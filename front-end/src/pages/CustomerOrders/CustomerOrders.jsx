@@ -6,7 +6,7 @@ import { getLocalStorage } from '../../utils/localStorage';
 import styles from './CustomerOrders.module.css';
 
 const role = 'customer';
-const baseUrl = process.env.BASE_URL || 'http://localhost:3001';
+const baseUrl = process.env.BASE_URL || 'https://back-end-delivery.up.railway.app';
 
 function CustomerOrders() {
   const endpoint = '/checkout';
