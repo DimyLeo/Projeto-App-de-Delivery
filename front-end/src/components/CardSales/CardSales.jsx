@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import moment from 'moment';
+// import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
@@ -47,7 +47,8 @@ function CardSales({ order, role, dataTestid }) {
               className={ classNameDataValue }
               data-testid={ `${dataTestid}_orders__element-order-date-${id}` }
             >
-              { moment(saleDate).format('DD/MM/YYYY') }
+              {/* { moment(saleDate).format('DD/MM/YYYY') } */}
+              { saleDate.format('DD/MM/YYYY') }
             </p>
 
             <p
