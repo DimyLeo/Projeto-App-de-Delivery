@@ -6,6 +6,8 @@ import { useHistory } from 'react-router-dom';
 import { setLocalStorage } from '../../utils/localStorage';
 import styles from './Login.module.css';
 
+require('dotenv').config();
+
 const STYLE_CLASSNAMES = {
   FORM_VALIDATION: 'form-validation',
   FORM_VALIDATION_SUCCESS: 'form-validation__success',
