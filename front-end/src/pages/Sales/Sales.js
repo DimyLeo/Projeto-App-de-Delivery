@@ -10,7 +10,7 @@ const HOST = process.env.REACT_APP_API_HOST || 'localhost:3001';
 const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
 
 function Sales() {
-  const endpoint = '/products';
+  const endpoint = '/checkout';
   const fetchOptions = useMemo(() => ({
     method: 'get',
     url: `${PROTOCOL}://${HOST}${endpoint}`,

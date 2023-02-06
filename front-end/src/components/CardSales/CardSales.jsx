@@ -48,7 +48,7 @@ function CardSales({ order, role, dataTestid }) {
               data-testid={ `${dataTestid}_orders__element-order-date-${id}` }
             >
               {/* { moment(saleDate).format('DD/MM/YYYY') } */}
-              { saleDate }
+              { new Date(saleDate).toLocaleDateString() }
             </p>
 
             <p
