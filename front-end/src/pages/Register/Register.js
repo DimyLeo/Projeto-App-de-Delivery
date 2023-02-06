@@ -9,7 +9,8 @@ const STYLE_CLASSNAMES = {
   FORM_LABEL: 'form-label',
 };
 
-const baseUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
+const HOST = process.env.REACT_APP_API_HOST || 'localhost:3001';
+const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
 
 function Register() {
   const [isError, setIsError] = useState([]);
@@ -40,7 +41,7 @@ function Register() {
     try {
       const endpoint = '/users';
       const { data: { response: { token } } } = await axios.post(
-        `${baseUrl}${endpoint}`,
+        `${PROTOCOL}://${HOST}${endpoint}`,
         formData,
       );
       const { password: _password, ...rest } = formData;

@@ -9,7 +9,9 @@ const STYLE_CLASSNAMES = {
   FORM_LABEL: 'form-label',
 };
 
-const baseUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
+const HOST = process.env.REACT_APP_API_HOST || 'localhost:3001';
+const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
+// `${PROTOCOL}://${HOST}${endpoint}`
 
 function AdminRegister({ setRefetch }) {
   const [isError, setIsError] = useState([]);
@@ -46,7 +48,7 @@ function AdminRegister({ setRefetch }) {
       };
 
       const endpoint = '/users';
-      const data = await axios.post(`${baseUrl}${endpoint}`, formData, config);
+      const data = await axios.post(`${PROTOCOL}://${HOST}${endpoint}`, formData, config);
       setRefetch((prevState) => !prevState);
       reset();
       console.log(data);

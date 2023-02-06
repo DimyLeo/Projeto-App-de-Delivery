@@ -5,7 +5,8 @@ import useFetch from '../../hooks/useFetch';
 import { getLocalStorage } from '../../utils/localStorage';
 import styles from './UsersManager.module.css';
 
-const baseUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
+const HOST = process.env.REACT_APP_API_HOST || 'localhost:3001';
+const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
 
 function UsersManager({ refetch, setRefetch }) {
   console.log(refetch);
@@ -13,7 +14,7 @@ function UsersManager({ refetch, setRefetch }) {
   const fetchOptions = useMemo(
     () => ({
       method: 'get',
-      url: `${baseUrl}${endpoint}`,
+      url: `${PROTOCOL}://${HOST}${endpoint}`,
       headers: { Authorization: getLocalStorage('user')?.token },
     }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -33,7 +34,7 @@ function UsersManager({ refetch, setRefetch }) {
       const body = { id: userId };
       const endpointDelete = '/users';
       const res = await axios
-        .delete(`${baseUrl}${endpointDelete}`, { data: body }, config);
+        .delete(`${PROTOCOL}://${HOST}${endpointDelete}`, { data: body }, config);
       setRefetch((prevState) => !prevState);
       return res.data;
     } catch (error) {

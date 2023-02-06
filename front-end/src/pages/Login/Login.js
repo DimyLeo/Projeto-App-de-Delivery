@@ -16,7 +16,6 @@ const SUCCESS = 200;
 
 const HOST = process.env.REACT_APP_API_HOST || 'localhost:3001';
 const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
-console.log(`${PROTOCOL}://${HOST}`);
 
 function Login() {
   const [isError, setIsError] = useState([]);

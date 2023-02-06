@@ -5,14 +5,15 @@ import useFetch from '../../hooks/useFetch';
 import { getLocalStorage } from '../../utils/localStorage';
 import styles from './Sales.module.css';
 
-const baseUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
 const role = 'seller';
+const HOST = process.env.REACT_APP_API_HOST || 'localhost:3001';
+const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
 
 function Sales() {
   const endpoint = '/products';
   const fetchOptions = useMemo(() => ({
     method: 'get',
-    url: `${baseUrl}${endpoint}`,
+    url: `${PROTOCOL}://${HOST}${endpoint}`,
     headers: { Authorization: getLocalStorage('user')?.token },
   }), []);
 

@@ -6,13 +6,14 @@ import { getLocalStorage } from '../../utils/localStorage';
 import styles from './CustomerOrders.module.css';
 
 const role = 'customer';
-const baseUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
+const HOST = process.env.REACT_APP_API_HOST || 'localhost:3001';
+const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
 
 function CustomerOrders() {
   const endpoint = '/checkout';
   const fetchOptions = useMemo(() => ({
     method: 'get',
-    url: `${baseUrl}${endpoint}`,
+    url: `${PROTOCOL}://${HOST}${endpoint}`,
     headers: { Authorization: getLocalStorage('user')?.token },
   }), []);
 
