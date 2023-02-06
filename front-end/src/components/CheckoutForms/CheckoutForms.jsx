@@ -7,12 +7,13 @@ import useFetch from '../../hooks/useFetch';
 import { getLocalStorage } from '../../utils/localStorage';
 import styles from './CheckoutForms.module.css';
 
-const baseUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
+const HOST = process.env.REACT_APP_API_HOST || 'localhost:3001';
+const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
 
 const endpointGet = '/users';
 const fetchOptions = {
   method: 'get',
-  url: `${baseUrl}${endpointGet}`,
+  url: `${PROTOCOL}://${HOST}${endpointGet}`,
   headers: { Authorization: getLocalStorage('user')?.token },
 };
 
@@ -66,7 +67,7 @@ function CheckoutForms({ totalPrice, products }) {
       const endpointPost = '/customer/checkout';
       const postOptions = {
         method: 'post',
-        url: `${baseUrl}${endpointPost}`,
+        url: `${PROTOCOL}://${HOST}${endpointPost}`,
         headers: { Authorization: getLocalStorage('user')?.token },
         data: payload,
       };

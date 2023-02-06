@@ -15,7 +15,8 @@ const numberFormatter = new Intl.NumberFormat('pt-BR', {
 
 const dateFormatter = new Intl.DateTimeFormat('pt-br');
 
-const baseUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
+const HOST = process.env.REACT_APP_API_HOST || 'localhost:3001';
+const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
 
 function OrderDetail() {
   const {
@@ -26,7 +27,7 @@ function OrderDetail() {
   const endpoint = `/customer/orders/${id}`;
   const fetchOptions = useMemo(() => ({
     method: 'get',
-    url: `${baseUrl}${endpoint}`,
+    url: `${PROTOCOL}://${HOST}${endpoint}`,
     headers: { Authorization: getLocalStorage('user')?.token },
   }), [endpoint]);
 
@@ -48,7 +49,7 @@ function OrderDetail() {
 
   const handleUpdateOrder = async (status) => {
     const updateOptions = {
-      url: `${baseUrl}/checkout/${id}`,
+      url: `${PROTOCOL}://${HOST}/checkout/${id}`,
       method: 'put',
       data: { status },
       headers: { Authorization: getLocalStorage('user')?.token },
