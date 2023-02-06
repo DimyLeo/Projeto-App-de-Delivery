@@ -15,7 +15,7 @@ const numberFormatter = new Intl.NumberFormat('pt-BR', {
 
 const dateFormatter = new Intl.DateTimeFormat('pt-br');
 
-const baseUrl = process.env.BASE_URL || 'https://back-end-delivery.up.railway.app';
+const baseUrl = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
 
 function OrderDetail() {
   const {
