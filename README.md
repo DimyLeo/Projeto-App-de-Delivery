@@ -53,9 +53,10 @@ o Grupo teve 12 dias para entregar o projeto e ser aprovado em todos os requisit
 
 2. Instale as dependências e inicialize o projeto
 
-- Dependências do Front e Back juntos e inicialização:
+- Para rodar o projeto de maneira mais fácil:
   - Na pasta raiz rode os seguintes comandos:
   - `npm install`
+  - Ultilize o arquivo .env de exemplo dentro da pasta backend para configurar as variaveis e conectar com o bando de dados, ou utilize o docker compose para rodar o backend e coloque apenas o nome do banco de dados no .env.
   - `npm run start`
 
 - Dependências do Frontend e inicialização:
