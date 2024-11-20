@@ -7,7 +7,7 @@ Esse é o um Projeto FullStack feito em grupo utilizando React para o Frontend e
 
 ## Layout:
   
-  - O layout e design foi criado pela Trybe e passado para nós por figma, o grupo optou por seguir o mesmo layout mas alterar alguns detalhes do design como a paleta de cores, não era obrigatório seguir a risca o figma por isso tomamos essa decição.
+  - O layout e design foi criado pela Trybe e passado para nós por figma, o grupo optou por seguir o mesmo layout mas alterar alguns detalhes do design como a paleta de cores, não era obrigatório seguir a risca o figma por isso tomamos essa decisão.
 
   <img src='/GIT-DELIVERY.gif' alt='gif-projeto' />
   
